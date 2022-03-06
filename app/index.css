@@ -82,7 +82,9 @@ body {
 }
 
 .whatsapp {
-  background: #01e675 !important;
+  background: #1d1d1d !important;
+  padding: 10px 30px;
+  font-weight: bold;
 }
 
 img {
