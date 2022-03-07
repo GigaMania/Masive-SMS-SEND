@@ -39,7 +39,7 @@ function setMessage() {
   phoneNumberField.innerText = "+" + phoneNum;
   let queryChar = iOS() ? "&" : "?";
   let smshref =
-    "https://wa.me/" +
+    "https://api.whatsapp.com/send?phone=" +
     "+" +
     phoneNum +
     queryChar +
