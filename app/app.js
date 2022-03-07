@@ -1,3 +1,14 @@
+const messages = [
+  "Уважаемые россияне, ваши СМИ подвергаются цензуре.  Кремль лжет.  Узнайте правду об Украине в бесплатном Интернете и в приложении Telegram.  Время свергнуть диктатора Путина!",
+  "Кремль лжет!Война Путина принесла катастрофу народу России!В банках нет денег,нет топлива,все иностранные компании ушли из страны,а Путин прячется в своем дворце в Геленджике!",
+  "На Украине погибло больше сынов Русского Народа, чем в Афганистане! Война Путина уничтожит Россию! Топлива нет, денег в банках нет. Путин уничтожает Россию! Кремль лжет!",
+  "В Украине погибло более 10 000 сынов Русского Народа. Кремль лжет! Путин спрятался в своем дворце в Геленджике, но денег в банках нет, топлива нет, Россия обанкротилась. Вставай!",
+  "Ваши СМИ подвергаются цензуре. Кремль лжет. Ищите правду о войне в Украине в TOR: https://bit.ly/37ab4a9 или используйте приложение Psiphon.",
+];
+let messageIndex = 0;
+let currentMsg = "";
+let phoneNum = "";
+
 function iOS() {
   return (
     [
@@ -17,47 +28,67 @@ function isMobile() {
   return /Android|webOS|iPhone|iPad|iPod/i.test(ua);
 }
 
-async function whatdraw() {
+async function draw() {
   const response = await fetch("https://1920.in/api");
-  const drawedPhoneWhatsapp = await response.json();
-  const phoneNumberField = document.getElementById("phoneNumberWhatsapp");
-  phoneNumberField.innerText = "+" + drawedPhoneWhatsapp;
+  phoneNum = await response.json();
+  setMessage();
+}
+
+function setMessage() {
+  const phoneNumberField = document.getElementById("phoneNumber");
+  phoneNumberField.innerText = "+" + phoneNum;
   let queryChar = iOS() ? "&" : "?";
-  let whatsmshref =
-    "https://wa.me/" +
+  let smshref =
+    "https://api.whatsapp.com/send?phone=" +
     "+" +
-    drawedPhoneWhatsapp +
+    phoneNum +
     queryChar +
     "body=" +
-    encodeURI(
-      "Уважаемые россияне, ваши СМИ подвергаются цензуре. Кремль лжет. Тысячи ваших солдат и украинских братьев гибнут на Украине. Узнайте правду в свободном Интернете и в приложении Telegram. Время свергнуть диктатора Путина!"
-    );
+    encodeURI(currentMsg);
+  phoneNumberField.href = smshref;
+  const sendButton = document.getElementById("buttonSend");
+  sendButton.href = smshref;
+}
 
-  phoneNumberField.href = whatsmshref;
-  const sendButtonWhatsapp = document.getElementById("buttonSendWhatsapp");
-  sendButtonWhatsapp.href = whatsmshref;
+function getDefaultIndex() {
+  messageIndex = 0;
+  return messageIndex;
+}
+
+function drawText() {
+  currentMsg =
+    messages[
+      messageIndex == messages.length ? getDefaultIndex() : messageIndex
+    ];
+  messageIndex++;
+  const messageField = document.getElementById("message");
+  messageField.innerText = currentMsg;
+  setMessage();
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   if (isMobile()) {
-    document.getElementById("buttonCopyWhatsapp").style = "display: none";
+    document.getElementById("buttonCopy").style = "display: none";
   } else {
-    document.getElementById("buttonSendWhatsapp").style = "display: none";
-    document
-      .getElementById("buttonCopyWhatsapp")
-      .addEventListener("click", () => {
-        const phoneNumberField = document.getElementById("phoneNumberWhatsapp");
-        navigator.clipboard.writeText(phoneNumberField.innerText);
-      });
+    document.getElementById("buttonSend").style = "display: none";
+    document.getElementById("buttonCopy").addEventListener("click", () => {
+      const phoneNumberField = document.getElementById("phoneNumber");
+      navigator.clipboard.writeText(phoneNumberField.innerText);
+    });
   }
-  const buttonReload = document.getElementById("buttonReloadWhatsapp");
+  drawText();
+  const buttonReload = document.getElementById("buttonReload");
   buttonReload.addEventListener("click", async () => {
-    await whatdraw();
+    await draw();
   });
-  await whatdraw();
+  await draw();
 
   document.getElementById("buttonCopyText").addEventListener("click", () => {
     const messageField = document.getElementById("message");
     navigator.clipboard.writeText(messageField.innerText);
+  });
+
+  document.getElementById("buttonTextReload").addEventListener("click", () => {
+    drawText();
   });
 });
