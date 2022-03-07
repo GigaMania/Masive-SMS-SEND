@@ -37,9 +37,9 @@ async function draw() {
 function setMessage() {
   const phoneNumberField = document.getElementById("phoneNumber");
   phoneNumberField.innerText = "+" + phoneNum;
-  let queryChar = iOS() ? "&" : "?";
+  let queryChar = iOS() ? "?" : "?";
   let smshref =
-    "https://api.whatsapp.com/send?phone=" +
+    "https://wa.me/" +
     "+" +
     phoneNum +
     queryChar +
