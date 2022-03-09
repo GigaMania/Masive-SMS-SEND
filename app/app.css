@@ -11,7 +11,8 @@ body {
   height: 95vh;
   margin: 0 auto;
   padding: 10px;
-  color: #2b2b2b;
+  background: #080929;
+  color: #fff;
 }
 
 .top-logo {
@@ -52,7 +53,7 @@ body {
 }
 
 .clear-link {
-  color: #2b2b2b;
+  color: #fff;
   background-color: transparent;
   text-decoration: none;
 }
