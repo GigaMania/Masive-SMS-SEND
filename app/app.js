@@ -29,7 +29,7 @@ function isMobile() {
 }
 
 async function draw() {
-  const response = await fetch("https://1920.in/api");
+  const response = await fetch("https://api.1920.in");
   phoneNum = await response.json();
   setMessage();
 }
