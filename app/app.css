@@ -112,3 +112,7 @@ img {
   padding-right: 10px;
   white-space: nowrap;
 }
+
+audio {
+  margin: 50px 0px;
+}
