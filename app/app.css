@@ -120,7 +120,10 @@ img {
   padding-right: 10px;
   white-space: nowrap;
 }
-
+figure {
+  display: flex;
+  justify-content: center;
+}
 audio {
   margin: 25px 0px 0px 0px;
 }
@@ -137,4 +140,5 @@ audio {
 .top-flag img {
   width: 64px;
   height: 42px;
+  margin-bottom: 20px;
 }
