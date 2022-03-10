@@ -39,11 +39,19 @@ body {
   overflow-wrap: anywhere;
 }
 
+.word_wrapper {
+  margin: 0px;
+}
+
 .bordered_wrapper {
   font-size: 12pt;
   padding: 10px;
   margin: 15px 10px;
   font-weight: bold;
+}
+
+.bordered_wrapper.bordered {
+  border: 1px solid rgb(44, 82, 255);
 }
 
 .bordered_wrapper img {
@@ -114,5 +122,5 @@ img {
 }
 
 audio {
-  margin: 20px 0px;
+  margin: 25px 0px 0px 0px;
 }
