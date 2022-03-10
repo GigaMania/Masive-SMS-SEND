@@ -51,7 +51,7 @@ body {
 }
 
 .bordered_wrapper.bordered {
-  border: 1px solid rgb(44, 82, 255);
+  border: 1px solid #02e675;
 }
 
 .bordered_wrapper img {
@@ -127,7 +127,7 @@ audio {
 
 .sentence_wrapper {
   text-transform: uppercase;
-  margin: 20px 0px;
+  margin: 25px 0px;
 }
 
 .top-flag {
