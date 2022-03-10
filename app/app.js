@@ -92,3 +92,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     drawText();
   });
 });
+
+var audio = document.getElementById("play");
+
+audio.play();
