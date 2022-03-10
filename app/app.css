@@ -8,7 +8,7 @@ body {
   font-size: 9pt;
   text-align: center;
   max-width: 1100px;
-  height: 95vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 10px;
   background: #080929;
@@ -123,4 +123,18 @@ img {
 
 audio {
   margin: 25px 0px 0px 0px;
+}
+
+.sentence_wrapper {
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+
+.top-flag {
+  margin: 25px 0px;
+}
+
+.top-flag img {
+  width: 64px;
+  height: 42px;
 }
