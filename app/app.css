@@ -113,14 +113,15 @@ img {
   border-top-right-radius: 10px;
 }
 
+.footer .logos img {
+  width: 32px;
+  height: 32px;
+}
+
 .reload-button {
   max-height: 40px;
   padding: 0 10px;
   cursor: pointer;
-}
-
-.reload-button svg {
-  fill: #524fff;
 }
 
 .reload-button__small {
