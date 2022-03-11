@@ -38,8 +38,13 @@ body {
   font-size: 12pt;
   overflow-wrap: anywhere;
 }
-.fb-share-button {
-  margin-top: 10px;
+
+.share-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
 }
 
 .word_wrapper {
