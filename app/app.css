@@ -99,11 +99,18 @@ img {
   height: 40px;
 }
 
-.logos {
-  padding: 30px 0;
+.footer {
+  width: 100%;
+}
+
+.footer .logos {
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .reload-button {
@@ -149,4 +156,16 @@ audio {
   width: 64px;
   height: 42px;
   margin-bottom: 20px;
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+  padding: 5px 20px;
 }
