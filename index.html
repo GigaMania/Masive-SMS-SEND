@@ -32,6 +32,13 @@
           <source src="app/voice.mp3" type="audio/mp3">
         </audio>
     </figure>
+
+    <div class="fb-share-button" 
+        data-href="https://developers.facebook.com/docs/plugins/" 
+        data-layout="button_count" data-size="large">
+        <a target="_blank" 
+        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" 
+        class="fb-xfbml-parse-ignore">Share</a></div>
       <div class="center">
         <div class="bordered_wrapper center">
             <h4 class="word_wrapper">If you would like to send an SMS via WhatsApp, please COPY the text below.</h4>
@@ -93,5 +100,13 @@
       <img src="app/ukrainian-flag.svg" alt="Flag"/>
         </div>
   </div>
-  </body>
+
+  <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" 
+nonce="0mQJQppS"></script>
+
+
+</body>
 </html>

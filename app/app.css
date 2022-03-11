@@ -38,6 +38,9 @@ body {
   font-size: 12pt;
   overflow-wrap: anywhere;
 }
+.fb-share-button {
+  margin-top: 10px;
+}
 
 .word_wrapper {
   margin: 0px;
