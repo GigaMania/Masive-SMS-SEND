@@ -1,4 +1,4 @@
-# SMS-SEND - RUSSIAN PHONE NUMBERS!
+# SEND SMS VIA WHATSAPP - RUSSIAN PHONE NUMBERS!
 
 We the people of the world have a message to the Russian nation.
 A nation that is to pay a huge price because of the shameful decision of the dictator Putin to attack an independent Ukraine by armed forces. The joint action of all the states of the free world, as a response to Russia’s aggression, will lead to the collapse of the entire country.
