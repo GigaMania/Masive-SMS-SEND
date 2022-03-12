@@ -1,3 +1,8 @@
+@font-face {
+  font-family: flags;
+  src: url("../font/flags.ttf");
+}
+
 html,
 body {
   height: 100%;
@@ -15,9 +20,39 @@ body {
   color: #fff;
 }
 
-.top-logo {
-  margin: 20px 0;
+.header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc300;
+  background-image: linear-gradient(0deg, #ffc300 49%, #007fff 50%);
+  border-radius: 55px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.language a:link,
+.language a:visited,
+.language a:active {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.language .flagEn,
+.language .flagGe {
+  font-family: "flags";
   font-size: 25px;
+}
+
+.language .flagEn {
+  position: relative;
+  left: 15px;
+}
+
+.top-logo {
+  margin: 20px 20px;
 }
 
 .center {
